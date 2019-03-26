@@ -29,10 +29,7 @@ let Offers = {
         <h2 class="text-center">Brak ofert spełniających kryteria.</h2>
         `
         }
-    },
-    after_render: async () => {
-    }
-};
+    }};
 
 function offer_to_html(offer) {
     return /*html*/ `

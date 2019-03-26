@@ -49,7 +49,10 @@ document
 
 document
     .getElementById('add-offer-button')
-    .addEventListener('click', OfferCreation.addOffer);
+    .addEventListener('click', async () => {
+        await OfferCreation.addOffer();
+        await loader();
+    });
 
 document
     .getElementById('home')

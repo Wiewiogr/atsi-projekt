@@ -2,38 +2,40 @@ import ApiClient from './api_client.js';
 import DateFormatter from './date_utils.js';
 
 let Offers = {
-  render: async () => {
-    let categories = await ApiClient.getFilters('category');
-    let cities = await ApiClient.getFilters('city');
+    render: async () => {
+        let categories = await ApiClient.getFilters('category');
+        let cities = await ApiClient.getFilters('city');
 
-    let offers = await ApiClient.getOffers();
+        let offers = await ApiClient.getOffers();
 
-    if(offers.length > 0) {
-        return /*html*/ `
+        if (offers.length > 0) {
+            return /*html*/ `
         <div class="row">
         ${offers
-          .map(offer => {
-            offer.city = cities.find(city => city.id == offer.cityId).name;
-            offer.category = categories.find(
-              category => category.id == offer.categoryId
-            ).name;
-            return offer;
-          })
-          .map(offer => offer_to_html(offer))
-          .join('\n ')}
+                .reverse()
+                .map(offer => {
+                    offer.city = cities.find(city => city.id == offer.cityId).name;
+                    offer.category = categories.find(
+                        category => category.id == offer.categoryId
+                    ).name;
+                    return offer;
+                })
+                .map(offer => offer_to_html(offer))
+                .join('\n ')}
         </div>
         `;
-    } else {
-        return /*html*/ `
+        } else {
+            return /*html*/ `
         <h2 class="text-center">Brak ofert spełniających kryteria.</h2>
         `
+        }
+    },
+    after_render: async () => {
     }
-  },
-  after_render: async () => {}
 };
 
 function offer_to_html(offer) {
-  return /*html*/ `
+    return /*html*/ `
 <div class="col-md-4">
   <div class="card mb-4 shadow-sm">
       <img src="./aukcja.jpg" class="card-img-top" width="100%" alt="Responsive image" />
@@ -52,8 +54,8 @@ function offer_to_html(offer) {
       </div>
   </div>
   <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" id="offer-${
-    offer.id
-  }-details-modal">
+        offer.id
+        }-details-modal">
       <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">

@@ -46,7 +46,7 @@ let Filters = {
 
 function filter_to_html(filter, type) {
     return /*html*/ `
-    <div class="col-4">
+    <div class="col-6">
       <label class="radio">
           <input type="radio" name="${type}" value="${filter.id}" checked />  ${
         filter.name

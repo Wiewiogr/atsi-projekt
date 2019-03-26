@@ -2,192 +2,193 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
 
-  <title>Ofertron</title>
-  <script type="module" src="./app.js"></script>
+    <title>Ofertron</title>
+    <script type="module" src="./app.js"></script>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="#" id="home">Ofertron</a>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#" id="about-project">O projekcie</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" id="about-us">O nas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" id="rules">Regulamin</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" id="contact">Kontakt</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" id="help">Pomoc</a>
-          </li>
-        </ul>
-      </div>
+        <a class="navbar-brand" href="#" id="home">Ofertron</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="about-project">O projekcie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="about-us">O nas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="rules">Regulamin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="contact">Kontakt</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="help">Pomoc</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </nav>
+</nav>
 
-  <div class="album py-5 bg-light">
+<div class="album py-5 bg-light">
     <div class="container">
-      <div id="search-bar">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card mb-4 shadow-sm">
-              <div class="card-body">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-10">
-                      <div class="input-group">
-                        <input class="form-control" type="text" id="search-bar-input"
-                          placeholder="Wpisz czego szukasz..." />
-                        <span class="input-group-btn">
+        <div id="search-bar">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <div class="input-group">
+                                            <input class="form-control" type="text" id="search-bar-input"
+                                                   placeholder="Wpisz czego szukasz..."/>
+                                            <span class="input-group-btn">
                           <button class="btn btn-default btn-primary" id="search-button">
                             Szukaj
                           </button>
                         </span>
-                      </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button type="button" class="btn btn-success btn-block" placeholder="City"
+                                                data-toggle="modal"
+                                                data-target="#addOfferModal" id="open-add-offer-button">
+                                            Utwórz
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-2">
-                      <button type="button" class="btn btn-success btn-block" placeholder="City" data-toggle="modal"
-                        data-target="#addOfferModal" id="open-add-offer-button">
-                        Utwórz
-                      </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="addOfferModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Nowa oferta</h5>
                     </div>
-                  </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="offer-name" class="col-form-label">Nazwa oferty:</label>
+                                <input type="text" class="form-control" id="offer-name"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="offer-category" class="col-form-label">Kategoria oferty:</label>
+                                <select class="form-control" id="offer-category"> </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="offer-city" class="col-form-label">Miasto oferty:</label>
+                                <select class="form-control" id="offer-city"> </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="offer-city" class="col-form-label">Czas wygaśnięcia oferty:</label>
+                                <select class="form-control" id="offer-expiration-period">
+                                    <option value="1">1 dzień</option>
+                                    <option value="2">2 dni</option>
+                                    <option value="7">7 dni</option>
+                                    <option value="14">14 dni</option>
+                                    <option value="30">30 dni</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="offer-contact-email" class="col-form-label">Email kontaktowy:</label>
+                                <input type="text" class="form-control" id="offer-contact-email"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="offer-price" class="col-form-label">Cena:</label>
+                                <input type="text" class="form-control" id="offer-price"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="offer-content" class="col-form-label">Treść oferty:</label>
+                                <textarea class="form-control" id="offer-content"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                            Zamknij
+                        </button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" id="add-offer-button">
+                            Dodaj ofertę
+                        </button>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
 
-      <div class="modal fade" id="addOfferModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Nowa oferta</h5>
+        <div class="modal fade" id="offerCreationSuccess" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        Oferta została dodana.
+                        <hr/>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                Czas wygaśnięcia oferty:
+                            </div>
+                            <div id="offer-delete-expiration-date"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                            OK
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="modal-body">
-              <form>
-                <div class="form-group">
-                  <label for="offer-name" class="col-form-label">Nazwa oferty:</label>
-                  <input type="text" class="form-control" id="offer-name" />
-                </div>
-                <div class="form-group">
-                  <label for="offer-category" class="col-form-label">Kategoria oferty:</label>
-                  <select class="form-control" id="offer-category"> </select>
-                </div>
-                <div class="form-group">
-                  <label for="offer-city" class="col-form-label">Miasto oferty:</label>
-                  <select class="form-control" id="offer-city"> </select>
-                </div>
-                <div class="form-group">
-                  <label for="offer-city" class="col-form-label">Czas wygaśnięcia oferty:</label>
-                  <select class="form-control" id="offer-expiration-period">
-                    <option value="1">1 dzień </option>
-                    <option value="2">2 dni </option>
-                    <option value="7">7 dni </option>
-                    <option value="14">14 dni </option>
-                    <option value="30">30 dni </option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="offer-contact-email" class="col-form-label">Email kontaktowy:</label>
-                  <input type="text" class="form-control" id="offer-contact-email" />
-                </div>
-                <div class="form-group">
-                  <label for="offer-price" class="col-form-label">Cena:</label>
-                  <input type="text" class="form-control" id="offer-price" />
-                </div>
-                <div class="form-group">
-                  <label for="offer-content" class="col-form-label">Treść oferty:</label>
-                  <textarea class="form-control" id="offer-content"></textarea>
-                </div>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                Zamknij
-              </button>
-              <button type="button" class="btn btn-primary" data-dismiss="modal" id="add-offer-button">
-                Dodaj ofertę
-              </button>
-            </div>
-          </div>
         </div>
-      </div>
 
-      <div class="modal fade" id="offerCreationSuccess" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-body">
-              Oferta została dodana.
-              <hr />
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  Czas wygaśnięcia oferty:
+        <div class="modal fade" id="offerCreationError" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h3>Nie udało się dodać oferty.</h3>
+                        <div id="offer-creation-failure-reasons"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                            OK
+                        </button>
+                    </div>
                 </div>
-                <div id="offer-delete-expiration-date"></div>
-              </div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                OK
-              </button>
-            </div>
-          </div>
         </div>
-      </div>
 
-      <div class="modal fade" id="offerCreationError" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-body">
-              <h3>Nie udało się dodać oferty.</h3>
-              <div id="offer-creation-failure-reasons"></div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                OK
-              </button>
-            </div>
-          </div>
+        <div id="filters">
+            <h2>Ładowanie...</h2>
         </div>
-      </div>
-
-      <div id="filters">
-        <h2>Ładowanie...</h2>
-      </div>
-      <div id="site-content">
-        <h2>Ładowanie...</h2>
-      </div>
+        <div id="site-content">
+            <h2>Ładowanie...</h2>
+        </div>
     </div>
-  </div>
+</div>
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

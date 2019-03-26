@@ -1,19 +1,19 @@
 const pagesContent = {
-  'about-us': {
-    title: 'O nas',
-    content: /*html*/`
+    'about-us': {
+        title: 'O nas',
+        content: /*html*/`
     Ofertron to portal, która pozwala na zamieszczanie ofert i ich przeglądanie. Istniejemy od 26 marca 2019 roku. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae ligula lacinia, imperdiet libero nec, ultricies mi. Praesent in diam a nulla consequat rhoncus in eu sem. Praesent sit amet dui elit. Vivamus viverra, odio congue tempus varius, eros sem efficitur turpis, at hendrerit quam mi eget nunc. Cras fringilla massa lorem, ac pellentesque tortor sollicitudin non. Suspendisse id ultricies tellus, sed mattis dui. Curabitur a nisl id mi volutpat faucibus. 
     `
-  },
-  'about-project':{
-    title: 'O projekcie',
-    content: /*html*/`
+    },
+    'about-project': {
+        title: 'O projekcie',
+        content: /*html*/`
     O nas
     `
-  },
-  rules: {
-    title: 'Regulamin',
-    content: /*html*/`
+    },
+    rules: {
+        title: 'Regulamin',
+        content: /*html*/`
     <h3>Regulamin Ofertron</h3>
     <ul>
         <ol><h4>1) Definicje </h4></ol>
@@ -39,26 +39,26 @@ const pagesContent = {
         </ul>
     </ul>
     `
-  },
-  contact: {
-    title: 'Kontakt',
-    content: /*html*/`
+    },
+    contact: {
+        title: 'Kontakt',
+        content: /*html*/`
     Skontaktuj się z nami! <br>
     Wyśilj email na <a href="mailto:kontakt@ofertron.pl">kontakt@ofertron.pl</a>.
     `
-  },
-  help: {
-    title: 'Pomoc',
-    content: /*html*/`
+    },
+    help: {
+        title: 'Pomoc',
+        content: /*html*/`
     Potrzebujesz pomocy? <br>
     Wyśilj email na <a href="mailto:pomoc@ofertron.pl">pomoc@ofertron.pl</a>.
     `
-  },
+    },
 };
 
 let StaticPages = {
-  render: page => {
-    return /*html*/ `
+    render: page => {
+        return /*html*/ `
     <div class="row">
     <div class="col-md-12">
         <div class="card mb-4 shadow-sm">
@@ -70,7 +70,7 @@ let StaticPages = {
     </div>
     </div>
       `;
-  }
+    }
 };
 
 export default StaticPages;

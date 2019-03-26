@@ -1,12 +1,12 @@
 import ApiClient from './api_client.js';
 
 let Filters = {
-  render: async () => {
-    let categories = await ApiClient.getFilters('category');
-    categories.push({ id: -1, name: 'Wszystko' });
-    let cities = await ApiClient.getFilters('city');
-    cities.push({ id: -1, name: 'Wszystko' });
-    let view = /*html*/ `
+    render: async () => {
+        let categories = await ApiClient.getFilters('category');
+        categories.push({id: -1, name: 'Wszystko'});
+        let cities = await ApiClient.getFilters('city');
+        cities.push({id: -1, name: 'Wszystko'});
+        let view = /*html*/ `
 <div class="row">
   <div class="col-md-6">
     <div class="card mb-4 shadow-sm">
@@ -16,8 +16,8 @@ let Filters = {
         <form id="categories-form">
           <div class="row">
             ${categories
-              .map(category => filter_to_html(category, 'category-radio'))
-              .join('\n ')}
+            .map(category => filter_to_html(category, 'category-radio'))
+            .join('\n ')}
             </div>
             </form>
         </div>
@@ -40,18 +40,17 @@ let Filters = {
   </div>
 </div>
          `;
-    return view;
-  },
-  after_render: async () => {}
+        return view;
+    }
 };
 
 function filter_to_html(filter, type) {
-  return /*html*/ `
+    return /*html*/ `
     <div class="col-4">
       <label class="radio">
           <input type="radio" name="${type}" value="${filter.id}" checked />  ${
-    filter.name
-  } 
+        filter.name
+        } 
       </label>
     </div>
     `;

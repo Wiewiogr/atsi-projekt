@@ -5,7 +5,7 @@ import StaticPages from './static_pages.js';
 
 const init = async () => {
     const filters = null || document.getElementById('filters');
-    filters.innerHTML = '<h2 class="text-center">Ładowanie...<h2>';
+    filters.innerHTML = '<h2 class="text-center">Ładowanie...</h2>';
 
     filters.innerHTML = await Filters.render();
 
@@ -18,7 +18,7 @@ const init = async () => {
 
 const loader = async () => {
     const content = null || document.getElementById('site-content');
-    content.innerHTML = '<h2 class="text-center">Ładowanie...<h2>';
+    content.innerHTML = '<h2 class="text-center">Ładowanie...</h2>';
 
     content.innerHTML = await Offers.render();
 };

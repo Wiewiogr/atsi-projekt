@@ -17,10 +17,10 @@ const pagesContent = {
     <hr>
     <h3>Technologie</h3>
     Aplikacja została stworzona jako single page application tzn. strona, która w dynamiczny sposób zmienia swoją treść bez koniecznośći jej przeładowania. 
-    Tak zostało wszystko w niej zrealizowane. Np. przyciśniecie "szukaj" wykonuje zapytanie do webserwisu przez interfejs REST, który pobiera dane z bazy danych, wysyła do strony i tam jest dynamiczne aktualizowana.
+    Tak zostało wszystko w niej zrealizowane. Np. przyciśniecie "szukaj" wykonuje zapytanie do aplikcaji serwerowej przez interfejs REST, który pobiera dane z bazy danych, wysyła do strony i tam jest dynamiczne aktualizowana.
     Strona jest responsywna dzięki zastosowaniu frameworka bootstrap, cały wygląd strony opiera się na tej bibliotece. 
     Aplikacja frontendowa jest napisana w czystym javascript bez zastosowania żadnych frameworków. 
-    Wyświetla ona dane, które udostępnia jej webserwis - backend napisany w kotlinie. 
+    Wyświetla ona dane, które udostępnia jej aplikacja serwerowa - backend napisany w kotlinie. 
     Udostępnia on interfejs REST, przez który można pobrać oferty, kategorie i miasta, jak również dodać ofertę. Wszystkie dane przechowywane są w relacyjnej bazie danych Postgres.
     <hr>
     <h3>Infrastruktura</h3>
